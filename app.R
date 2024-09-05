@@ -27,7 +27,9 @@ pitch_colors = c("Fastball" = '#d7191c',
                  "Splitter" = '#90EE32',
                  "Cutter" = "pink")
 
-df <- # delete this text with a function to read in your data, make sure not to delete this symbol over here: %>%
+df <- # delete this text with a function to read in your data
+      
+df <- df %>% 
       # I like to filter out pitches where the trackman wasn't operating, 
       # this may not be necessary if you do na.rm = T in later operations but I like to be safe
       filter(is.na(HorzBreak) == F) %>% 
